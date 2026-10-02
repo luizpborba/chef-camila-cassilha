@@ -77,7 +77,6 @@
       <div class="stats revela">
         <div><strong>até 60</strong><span>convidados por evento</span></div>
         <div><strong>10 anos</strong><span>de cozinha profissional</span></div>
-        <div><strong>ao vivo</strong><span>finalizado no local</span></div>
         <div><strong>21 mil</strong><span>seguidores no Instagram</span></div>
       </div>
     </div>
@@ -104,7 +103,7 @@
   </section>
 
   <!-- Cardápio -->
-  <section class="sec cinza" id="cardapio">
+  <section class="sec cinza cardapio" id="cardapio">
     <div class="wrap">
       <div class="sec-topo revela">
         <div>
@@ -113,63 +112,92 @@
         </div>
         <p>Escolha um ou mais sabores. Montamos o cardápio de acordo com o seu evento.</p>
       </div>
-      <div class="pratos">
-        <article class="prato revela">
-          <div class="prato-foto"><img src="img/risoto-parmesao.jpg" alt="Risoto de parmesão com crocante de queijo" width="1100" height="705" loading="lazy"></div>
-          <h3>Parmesão e limão siciliano</h3>
-          <p>Leve, perfumado e elegante.</p>
-        </article>
-        <article class="prato revela">
-          <div class="prato-foto"><img src="img/risoto-funghi.jpg" alt="Risoto de cogumelos em prato listrado" width="900" height="1125" loading="lazy"></div>
-          <h3>Funghi</h3>
-          <p>Cogumelos e aroma intenso.</p>
-        </article>
-        <article class="prato revela">
-          <div class="prato-foto"><img src="img/risoto-camarao.jpg" alt="Risoto de camarão em prato branco" width="900" height="1350" loading="lazy"></div>
-          <h3>Camarão</h3>
-          <p>A cara da ilha.</p>
-        </article>
-        <article class="prato revela">
-          <div class="prato-foto"><img src="img/risoto-abobora.jpg" alt="Risoto de abóbora em prato de porcelana" width="900" height="1329" loading="lazy"></div>
-          <h3>Abóbora</h3>
-          <p>Cremoso e acolhedor.</p>
-        </article>
+    </div>
+
+    <div class="carrossel" id="carrossel" role="region" aria-roledescription="carrossel" aria-label="Sabores de risoto" tabindex="0">
+      <div class="carrossel-palco">
+        <figure class="slide" data-nome="Parmesão e limão siciliano" data-desc="Leve, perfumado e elegante.">
+          <img src="img/risoto-parmesao.jpg" alt="Risoto de parmesão com crocante de queijo" width="1100" height="705" draggable="false">
+        </figure>
+        <figure class="slide" data-nome="Funghi" data-desc="Cogumelos e aroma intenso.">
+          <img src="img/risoto-funghi.jpg" alt="Risoto de cogumelos em prato listrado" width="900" height="1125" draggable="false" decoding="async">
+        </figure>
+        <figure class="slide" data-nome="Camarão" data-desc="A cara da ilha.">
+          <img src="img/risoto-camarao.jpg" alt="Risoto de camarão em prato branco" width="900" height="1350" draggable="false" decoding="async">
+        </figure>
+        <figure class="slide" data-nome="Abóbora" data-desc="Cremoso e acolhedor.">
+          <img src="img/risoto-abobora.jpg" alt="Risoto de abóbora em prato de porcelana" width="900" height="1329" draggable="false" decoding="async">
+        </figure>
+        <figure class="slide" data-nome="Alho-poró" data-desc="O preferido de quem já provou.">
+          <img src="img/risoto-alho-poro.jpg" alt="Risoto de alho-poró com parmesão em prato branco" width="1100" height="733" draggable="false" decoding="async">
+        </figure>
       </div>
-      <p class="nota">Também fazemos alho-poró, damasco com amêndoas e outros sabores sob consulta.</p>
+      <div class="carrossel-info">
+        <span class="carrossel-num" id="car-num">01 / 05</span>
+        <h3 id="car-nome" aria-live="polite">Parmesão e limão siciliano</h3>
+        <p id="car-desc">Leve, perfumado e elegante.</p>
+      </div>
+      <div class="carrossel-ctrl">
+        <button class="seta" id="car-ant" aria-label="Sabor anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+        <div class="pontos" id="car-pontos" role="tablist" aria-label="Escolher sabor"></div>
+        <button class="seta" id="car-prox" aria-label="Próximo sabor"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <p class="nota">Também fazemos damasco com amêndoas e outros sabores sob consulta.</p>
     </div>
   </section>
 
   <!-- Como funciona -->
-  <section class="sec escura" id="como-funciona">
-    <div class="wrap">
-      <span class="rotulo">COMO FUNCIONA</span>
-      <h2 class="h2-largo">Quatro passos até a <em>mesa posta</em>.</h2>
-      <ol class="passos">
-        <li class="revela"><span>01</span><h3>Conte sobre o evento</h3><p>Data, local e número de convidados.</p></li>
-        <li class="revela"><span>02</span><h3>Escolha os sabores</h3><p>Montamos o cardápio juntos.</p></li>
-        <li class="revela"><span>03</span><h3>Garanta a data</h3><p>Orçamento aprovado, agenda reservada.</p></li>
-        <li class="revela"><span>04</span><h3>Aproveite a festa</h3><p>Cozinhamos e servimos ao vivo.</p></li>
-      </ol>
-      <ul class="eventos" aria-label="Tipos de evento">
-        <li>Aniversários</li>
-        <li>Casamentos intimistas</li>
-        <li>Confraternizações</li>
-        <li>Eventos corporativos</li>
-        <li>Jantares em casa</li>
-      </ul>
-    </div>
+  <section class="escura passos-sec" id="como-funciona">
+      <div class="wrap">
+        <span class="rotulo">COMO FUNCIONA</span>
+        <h2 class="h2-largo">Quatro passos até a <em>mesa posta</em>.</h2>
+        <ol class="passos" id="passos">
+          <li><span>01</span><h3>Conte sobre o evento</h3><p>Data, local e número de convidados.</p></li>
+          <li><span>02</span><h3>Escolha os sabores</h3><p>Montamos o cardápio juntos.</p></li>
+          <li><span>03</span><h3>Garanta a data</h3><p>Orçamento aprovado, agenda reservada.</p></li>
+          <li><span>04</span><h3>Aproveite a festa</h3><p>Cozinhamos e servimos ao vivo.</p></li>
+        </ol>
+      </div>
   </section>
+
+  <div class="faixa" aria-label="Tipos de evento: aniversários, casamentos intimistas, confraternizações, eventos corporativos, jantares em casa, chás e batizados">
+    <div class="faixa-trilho" aria-hidden="true">
+      <span>Aniversários</span><i></i><em>Casamentos intimistas</em><i></i><span>Confraternizações</span><i></i><em>Eventos corporativos</em><i></i><span>Jantares em casa</span><i></i><em>Chás e batizados</em><i></i>
+      <span>Aniversários</span><i></i><em>Casamentos intimistas</em><i></i><span>Confraternizações</span><i></i><em>Eventos corporativos</em><i></i><span>Jantares em casa</span><i></i><em>Chás e batizados</em><i></i>
+    </div>
+  </div>
 
   <!-- Depoimentos -->
   <section class="sec" id="depoimentos">
     <div class="wrap">
-      <span class="rotulo">DEPOIMENTOS</span>
-      <blockquote class="citacao revela">“Cozinheiros excelentes e pessoas agradabilíssimas, <em>uma rara combinação maravilhosa</em>.”</blockquote>
-      <p class="autor"><b>Pedro F.</b> · cliente</p>
-      <div class="depos">
-        <figure class="revela"><blockquote>“Risoto perfeito! O de alho-poró é o meu preferido.”</blockquote><figcaption><b>Belly B.</b> · convidada</figcaption></figure>
-        <figure class="revela"><blockquote>“Os melhores. Vou organizar um evento só pra chamar vocês.”</blockquote><figcaption><b>Augusto S.</b> · convidado</figcaption></figure>
-        <figure class="revela"><blockquote>“Super indico, eles são maravilhosos.”</blockquote><figcaption><b>Eliana T.</b> · cliente</figcaption></figure>
+      <div class="sec-topo revela">
+        <div>
+          <span class="rotulo">DEPOIMENTOS</span>
+          <h2>Quem provou, <em>comentou</em>.</h2>
+        </div>
+        <p>Comentários reais deixados no nosso post do Instagram.</p>
+      </div>
+      <div class="prints">
+        <figure class="print revela"><img src="img/depoimentos/pedro-hc-fernandes.png" alt="Comentário de pedro.hc.fernandes no Instagram: Cozinheiros excelentes e pessoas agradabilíssimas, uma rara combinação maravilhosa!" width="608" height="242" loading="lazy"></figure>
+        <figure class="print revela"><img src="img/depoimentos/sarah_anjos.png" alt="Comentário de sarah_anjos no Instagram: O melhor risoto da vida!" width="608" height="170" loading="lazy"></figure>
+        <figure class="print revela"><img src="img/depoimentos/augusto-s-soares.png" alt="Comentário de augusto.s.soares no Instagram: Tá maluco! Os melhores. Vou organizar um evento só pra chamar vcs" width="608" height="206" loading="lazy"></figure>
+        <figure class="print revela"><img src="img/depoimentos/trevisaneliana.png" alt="Comentário de trevisaneliana no Instagram: Super indico, eles são maravilhosos" width="608" height="170" loading="lazy"></figure>
+        <figure class="print revela"><img src="img/depoimentos/wagnertorres.png" alt="Comentário de wagnertorres no Instagram: Só de pensar, já bateu a vontade! Muito bom desse casal" width="608" height="206" loading="lazy"></figure>
+        <figure class="print revela"><img src="img/depoimentos/amo-decor.png" alt="Comentário de amo.decor no Instagram: O melhor que já experimentei!" width="608" height="170" loading="lazy"></figure>
+        <figure class="print revela"><img src="img/depoimentos/rafaellabulhoes.png" alt="Comentário de rafaellabulhoes no Instagram: tudo que eles fazem é com muito amor" width="608" height="206" loading="lazy"></figure>
+        <figure class="print revela"><img src="img/depoimentos/gabiszenczuk.png" alt="Comentário de gabiszenczuk no Instagram: São os melhores" width="608" height="170" loading="lazy"></figure>
+      </div>
+      <div class="prints-rodape revela">
+        <span class="estrelas" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>
+        </span>
+        <p>Mais de 30 comentários no post de agenda aberta.</p>
+        <a class="btn btn-linha" href="https://www.instagram.com/p/Dd9besVB2xC/" target="_blank" rel="noopener">Ver no Instagram
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </a>
       </div>
     </div>
   </section>
@@ -177,22 +205,31 @@
   <!-- Sobre -->
   <section class="sec sobre" id="sobre">
     <div class="wrap split">
-      <div class="revela">
+      <div class="sobre-texto revela">
         <span class="rotulo">SOBRE NÓS</span>
         <h2>Dois chefs, <em>uma panela</em>.</h2>
-        <p class="lead">Jackson e Camila são casal dentro e fora da cozinha. Ela é chef, Natural Chef e estudante de Nutrição. Juntos, levam para cada evento a técnica de quem vive a gastronomia há dez anos.</p>
-        <ul class="tags">
-          <li>Chefs de cozinha</li>
-          <li>Natural Chef</li>
-          <li>Nutrição</li>
-          <li>Florianópolis</li>
-        </ul>
-        <a class="btn btn-linha" href="https://www.instagram.com/chefcamilacassilha/" target="_blank" rel="noopener">
+        <p class="lead">Jackson e Camila são casal dentro e fora da cozinha. Juntos, levam para cada evento a técnica de quem vive a gastronomia há dez anos.</p>
+        <dl class="ficha">
+          <div><dt>Formação</dt><dd>Chefs de cozinha</dd></div>
+          <div><dt>Especialização</dt><dd>Natural Chef</dd></div>
+          <div><dt>Estudos</dt><dd>Nutrição</dd></div>
+          <div><dt>Base</dt><dd>Florianópolis, SC</dd></div>
+        </dl>
+        <a class="link-insta" href="https://www.instagram.com/chefcamilacassilha/" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg>
-          @chefcamilacassilha
+          <span>Acompanhe a Cami no Instagram<b>@chefcamilacassilha</b></span>
+          <svg class="seta-link" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
         </a>
       </div>
-      <img class="sobre-foto revela" src="img/mesa-vinho.jpg" alt="Mesa posta com risoto, taça de vinho branco e tomates frescos" width="1300" height="866" loading="lazy">
+      <div class="sobre-visual revela">
+        <div class="sobre-moldura" id="sobre-moldura">
+          <img src="img/mesa-vinho.jpg" alt="Mesa posta com risoto, taça de vinho branco e tomates frescos" width="1300" height="866" loading="lazy">
+        </div>
+        <div class="sobre-cartao">
+          <span class="sobre-assina">Jackson &amp; Camila</span>
+          <span class="sobre-frase">Feito a quatro mãos, com o carinho de comida de casa.</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -204,8 +241,11 @@
         <h2>Vamos levar risoto <em>para a sua festa</em>?</h2>
         <p class="lead">Preencha e envie direto para o nosso WhatsApp. Respondemos com um orçamento personalizado.</p>
         <div class="zap-direto">
-          <span>WhatsApp</span>
-          <a href="https://wa.me/5548984584749" target="_blank" rel="noopener" data-evento="whatsapp_numero">(48) 98458-4749</a>
+          <a class="btn btn-zap btn-lg" href="https://wa.me/5548984584749?text=Ol%C3%A1%2C%20Chefs%20Jackson%20e%20Camila!%20Vim%20pelo%20site%20e%20quero%20conversar%20sobre%20risoto%20para%20o%20meu%20evento." target="_blank" rel="noopener" data-evento="whatsapp_botao">
+            <svg class="ic-zap" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.27.49 1.7.63.71.23 1.36.2 1.88.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.32l-.34-.2-3.57.94.95-3.48-.22-.36a9.42 9.42 0 0 1-1.44-5.02c0-5.2 4.23-9.44 9.44-9.44a9.4 9.4 0 0 1 9.43 9.45c0 5.2-4.23 9.43-9.44 9.43m8.03-17.47A11.3 11.3 0 0 0 12.05.7C5.8.7.7 5.79.7 12.05c0 2 .52 3.95 1.52 5.67L.6 23.3l5.72-1.5a11.3 11.3 0 0 0 5.42 1.38h.01c6.25 0 11.35-5.09 11.35-11.35 0-3.03-1.18-5.88-3.32-8.02"/></svg>
+            Chamar no WhatsApp
+          </a>
+          <span>(48) 98458-4749</span>
         </div>
       </div>
       <form class="form revela" id="form-orc" novalidate>
@@ -234,31 +274,48 @@
 
 <footer class="rodape">
   <div class="wrap">
-    <div class="rodape-grid">
+    <div class="rodape-topo">
       <div>
         <span class="logo-nome">CASSILHA</span>
         <span class="logo-sub">CHEFS · RISOTOS</span>
-        <p>Risoto para eventos na Grande Florianópolis.</p>
       </div>
-      <nav aria-label="Rodapé">
-        <span class="rodape-tit">MENU</span>
-        <a href="#experiencia">Experiência</a>
-        <a href="#cardapio">Cardápio</a>
-        <a href="#depoimentos">Depoimentos</a>
-      </nav>
-      <div>
-        <span class="rodape-tit">CONTATO</span>
-        <a href="https://wa.me/5548984584749" target="_blank" rel="noopener">(48) 98458-4749</a>
-        <a href="https://www.instagram.com/chefcamilacassilha/" target="_blank" rel="noopener">@chefcamilacassilha</a>
-        <span>Florianópolis · SC</span>
+      <a class="btn btn-ouro" href="#contato">Pedir orçamento
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <div class="rodape-grade">
+      <a class="celula" href="https://wa.me/5548984584749" target="_blank" rel="noopener" data-evento="whatsapp_rodape">
+        <span>WhatsApp</span><strong>(48) 98458-4749</strong>
+      </a>
+      <a class="celula" href="https://www.instagram.com/chefcamilacassilha/" target="_blank" rel="noopener">
+        <span>Instagram</span><strong>@chefcamilacassilha</strong>
+      </a>
+      <div class="celula">
+        <span>Atendimento</span><strong>Grande Florianópolis</strong>
+      </div>
+      <div class="celula">
+        <span>Eventos</span><strong>Até 60 convidados</strong>
       </div>
     </div>
+    <nav class="rodape-menu" aria-label="Rodapé">
+      <a href="#experiencia">Experiência</a>
+      <a href="#cardapio">Cardápio</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Orçamento</a>
+    </nav>
     <div class="rodape-base">
       <span>© <span id="ano">2026</span> Chefs Jackson e Camila Cassilha</span>
       <span>Sabor, qualidade e experiência em cada prato.</span>
     </div>
   </div>
 </footer>
+
+<a class="zap-flutua" href="https://wa.me/5548984584749?text=Ol%C3%A1%2C%20Chefs%20Jackson%20e%20Camila!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20de%20risoto." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp" data-evento="whatsapp_flutuante">
+  <svg class="ic-zap" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.27.49 1.7.63.71.23 1.36.2 1.88.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.32l-.34-.2-3.57.94.95-3.48-.22-.36a9.42 9.42 0 0 1-1.44-5.02c0-5.2 4.23-9.44 9.44-9.44a9.4 9.4 0 0 1 9.43 9.45c0 5.2-4.23 9.43-9.44 9.43m8.03-17.47A11.3 11.3 0 0 0 12.05.7C5.8.7.7 5.79.7 12.05c0 2 .52 3.95 1.52 5.67L.6 23.3l5.72-1.5a11.3 11.3 0 0 0 5.42 1.38h.01c6.25 0 11.35-5.09 11.35-11.35 0-3.03-1.18-5.88-3.32-8.02"/></svg>
+  <span class="zap-flutua-dica">Fale com a gente</span>
+</a>
 
 <script src="js/main.js" defer></script>
 </body>
