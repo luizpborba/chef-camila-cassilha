@@ -35,6 +35,10 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
+/* impede arrastar a página para o lado no celular sem criar outro rolador */
+@supports (overflow: clip) {
+  html, body { overflow-x: clip; }
+}
 img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
 ul, ol { list-style: none; }
@@ -154,7 +158,7 @@ h1 em, h2 em, .citacao em {
 .lista p { margin-top: 2px; font-size: 14.5px; color: var(--texto); }
 
 /* ---------- cardápio: carrossel 3D ---------- */
-.cardapio { overflow: hidden; }
+.cardapio { overflow: hidden; overflow: clip; touch-action: pan-y; }
 .cardapio .sec-topo { margin-bottom: clamp(24px, 3vw, 40px); }
 .carrossel { --slide-w: clamp(230px, 27vw, 370px); position: relative; outline: none; }
 .carrossel:focus-visible .carrossel-palco { outline: 2px solid var(--ouro); outline-offset: 8px; border-radius: 28px; }
@@ -213,7 +217,7 @@ h1 em, h2 em, .citacao em {
 .passos p { font-size: 14.5px; color: var(--inv-suave); }
 
 /* ---------- faixa de eventos ---------- */
-.faixa { background: var(--tinta); color: var(--inv-texto); border-top: 1px solid var(--inv-linha); padding: clamp(22px, 2.6vw, 34px) 0 clamp(28px, 3vw, 44px); overflow: hidden; white-space: nowrap; }
+.faixa { background: var(--tinta); color: var(--inv-texto); border-top: 1px solid var(--inv-linha); padding: clamp(22px, 2.6vw, 34px) 0 clamp(28px, 3vw, 44px); overflow: hidden; overflow: clip; white-space: nowrap; }
 .faixa-trilho { display: inline-flex; align-items: center; animation: rola 42s linear infinite; }
 .faixa:hover .faixa-trilho { animation-play-state: paused; }
 .faixa-trilho > * { margin-right: clamp(24px, 3vw, 44px); flex: none; }
