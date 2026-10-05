@@ -217,7 +217,7 @@ document.getElementById("form-orc").addEventListener("submit", ev => {
     "Olá, Chefs Jackson e Camila! Quero um orçamento de risoto.",
     `Nome: ${nome}`,
     `Data: ${data}`,
-    `Convidados: ${f.convidados.value}`,
+    `Convidados: ${parseInt(f.convidados.value, 10) > 0 ? parseInt(f.convidados.value, 10) : "a definir"}`,
     `Cidade: ${f.local.value.trim() || "a definir"}`
   ];
   window.open(`https://wa.me/${ZAP}?text=${encodeURIComponent(linhas.join("\n"))}`, "_blank", "noopener");
