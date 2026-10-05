@@ -67,7 +67,7 @@ const semMovimento = matchMedia("(prefers-reduced-motion: reduce)").matches;
     return b;
   });
 
-  // distância circular entre o slide e o atual (-2..2 para 5 itens)
+  // distância circular entre o slide e o atual (-2..3 para 6 itens)
   const dist = i => {
     let d = i - atual;
     if (d > total / 2) d -= total;

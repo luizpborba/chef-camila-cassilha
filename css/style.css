@@ -206,6 +206,20 @@ h1 em, h2 em, .citacao em {
 .pontos button[aria-selected="true"]::after { background: var(--ouro); }
 .nota { margin-top: 40px; font-size: 14.5px; color: var(--texto); text-align: center; }
 
+/* cardápio completo */
+.menu { margin-top: clamp(56px, 7vw, 96px); padding: clamp(28px, 4vw, 56px); background: var(--branco); border: 1px solid var(--linha); border-radius: var(--raio); box-shadow: 0 30px 60px -48px rgba(10, 10, 11, .4); }
+.menu-topo { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; padding-bottom: 24px; border-bottom: 1px solid var(--linha); }
+.menu-topo h3 { font-size: clamp(22px, 2.2vw, 28px); font-weight: 700; letter-spacing: -.02em; }
+.menu-topo p { font-size: 14.5px; color: var(--texto); }
+.menu-grade { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(28px, 4vw, 56px); margin-top: 32px; }
+.menu-col h4 { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding-bottom: 12px; margin-bottom: 8px; border-bottom: 1px solid var(--linha-forte); }
+.menu-col h4 span { font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--ouro-texto); }
+.menu-col h4 em { font-family: var(--serifa); font-style: italic; font-weight: 400; font-size: 17px; color: var(--texto); white-space: nowrap; }
+.menu-col li { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 9px 0; font-size: 15px; font-weight: 500; color: var(--tinta-2); border-bottom: 1px dashed var(--linha); }
+.menu-col li:last-child { border-bottom: 0; }
+.menu-col small { flex: none; padding: 3px 8px; border-radius: 999px; background: var(--cinza-1); font-size: 10.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ouro-texto); }
+.menu .nota { margin-top: 32px; }
+
 /* ---------- como funciona ---------- */
 .passos-sec { padding: var(--sec) 0 clamp(56px, 6vw, 88px); }
 .h2-largo { max-width: 640px; margin-bottom: clamp(40px, 5vw, 64px); }
@@ -338,6 +352,7 @@ a.celula:hover strong { color: var(--ouro-claro); }
 
 /* ---------- tablet ---------- */
 @media (max-width: 960px) {
+  .menu-grade { grid-template-columns: minmax(0, 1fr); gap: 32px; }
   .burger { display: block; }
   .nav {
     position: absolute; top: calc(100% + 8px); right: clamp(20px, 4vw, 56px);
