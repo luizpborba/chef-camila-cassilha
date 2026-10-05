@@ -151,66 +151,82 @@
       <div class="menu revela" id="menu">
         <div class="menu-topo">
           <h3>Cardápio completo</h3>
-          <p>Escolha um ou mais sabores para o seu evento.</p>
-        </div>
-        <div class="menu-grade">
-          <div class="menu-col">
-            <h4><span>Clássicos</span><em>17 sabores</em></h4>
-            <ul>
-            <li>Linguiça Blumenau</li>
-            <li>Limão siciliano</li>
-            <li>Caprese</li>
-            <li>Filé mignon</li>
-            <li>Quatro queijos</li>
-            <li>Cogumelos</li>
-            <li>Camarão</li>
-            <li>Salmão</li>
-            <li>Palmito</li>
-            <li>Legumes</li>
-            <li>Frango e milho</li>
-            <li>Carne (alcatra)</li>
-            <li>Tomate</li>
-            <li>Alho-poró</li>
-            <li>Bacon</li>
-            <li>Brócolis</li>
-            <li>Linguiça calabresa</li>
-            </ul>
-          </div>
-          <div class="menu-col">
-            <h4><span>Especiais</span><em>12 sabores</em></h4>
-            <ul>
-            <li>Filé mignon e gorgonzola</li>
-            <li>Pera e gorgonzola</li>
-            <li>Camarão e limão siciliano</li>
-            <li>Abóbora e carne seca</li>
-            <li>Bacon e brócolis</li>
-            <li>Brie, damasco e amêndoas laminadas</li>
-            <li>Ossobuco</li>
-            <li>Costela suína</li>
-            <li>Filé mignon suíno</li>
-            <li>Beterraba com queijo de cabra</li>
-            <li>Pinhão e bacon <small>sazonal</small></li>
-            <li>Pinhão e linguiça Blumenau <small>sazonal</small></li>
-            </ul>
-          </div>
-          <div class="menu-col">
-            <h4><span>Vegetarianos e veganos</span><em>11 sabores</em></h4>
-            <ul>
-            <li>Cogumelos</li>
-            <li>Palmito</li>
-            <li>Legumes</li>
-            <li>Rúcula e tomate seco</li>
-            <li>Abobrinha</li>
-            <li>Açafrão</li>
-            <li>Tomate</li>
-            <li>Alho-poró</li>
-            <li>Brócolis</li>
-            <li>Abóbora</li>
-            <li>Pinhão <small>sazonal</small></li>
-            </ul>
+          <div class="menu-ctrl">
+            <button class="seta" id="menu-ant" aria-label="Categoria anterior" aria-controls="menu-trilho"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+            <button class="seta" id="menu-prox" aria-label="Próxima categoria" aria-controls="menu-trilho"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
           </div>
         </div>
-        <p class="nota">Sabores sazonais conforme a época do pinhão. Outros sabores sob consulta.</p>
+        <div class="menu-trilho" id="menu-trilho" tabindex="0" aria-label="Categorias do cardápio">
+          <article class="menu-card" id="menu-card-1" role="group" aria-roledescription="cartão" aria-label="Clássicos, 1 de 3">
+            <header>
+              <span class="menu-num">01</span>
+              <h4>Clássicos</h4>
+              <p>Os favoritos de sempre. <em>17 sabores</em></p>
+            </header>
+            <ul class="menu-chips">
+          <li>Linguiça Blumenau</li>
+          <li>Limão siciliano</li>
+          <li>Caprese</li>
+          <li>Filé mignon</li>
+          <li>Quatro queijos</li>
+          <li>Cogumelos</li>
+          <li>Camarão</li>
+          <li>Salmão</li>
+          <li>Palmito</li>
+          <li>Legumes</li>
+          <li>Frango e milho</li>
+          <li>Carne (alcatra)</li>
+          <li>Tomate</li>
+          <li>Alho-poró</li>
+          <li>Bacon</li>
+          <li>Brócolis</li>
+          <li>Linguiça calabresa</li>
+            </ul>
+          </article>
+          <article class="menu-card" id="menu-card-2" role="group" aria-roledescription="cartão" aria-label="Especiais, 2 de 3">
+            <header>
+              <span class="menu-num">02</span>
+              <h4>Especiais</h4>
+              <p>Combinações da casa. <em>12 sabores</em></p>
+            </header>
+            <ul class="menu-chips">
+          <li>Filé mignon e gorgonzola</li>
+          <li>Pera e gorgonzola</li>
+          <li>Camarão e limão siciliano</li>
+          <li>Abóbora e carne seca</li>
+          <li>Bacon e brócolis</li>
+          <li>Brie, damasco e amêndoas laminadas</li>
+          <li>Ossobuco</li>
+          <li>Costela suína</li>
+          <li>Filé mignon suíno</li>
+          <li>Beterraba com queijo de cabra</li>
+          <li>Pinhão e bacon <small>sazonal</small></li>
+          <li>Pinhão e linguiça Blumenau <small>sazonal</small></li>
+            </ul>
+          </article>
+          <article class="menu-card" id="menu-card-3" role="group" aria-roledescription="cartão" aria-label="Vegetarianos e veganos, 3 de 3">
+            <header>
+              <span class="menu-num">03</span>
+              <h4>Vegetarianos e veganos</h4>
+              <p>Sem carne, com muito sabor. <em>11 sabores</em></p>
+            </header>
+            <ul class="menu-chips">
+          <li>Cogumelos</li>
+          <li>Palmito</li>
+          <li>Legumes</li>
+          <li>Rúcula e tomate seco</li>
+          <li>Abobrinha</li>
+          <li>Açafrão</li>
+          <li>Tomate</li>
+          <li>Alho-poró</li>
+          <li>Brócolis</li>
+          <li>Abóbora</li>
+          <li>Pinhão <small>sazonal</small></li>
+            </ul>
+          </article>
+        </div>
+        <div class="menu-pontos" id="menu-pontos" aria-hidden="true"><i></i><i></i><i></i></div>
+        <p class="nota">Pinhão conforme a época. Outros sabores sob consulta.</p>
       </div>
     </div>
   </section>
