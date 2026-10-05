@@ -67,7 +67,7 @@ const semMovimento = matchMedia("(prefers-reduced-motion: reduce)").matches;
     return b;
   });
 
-  // distância circular entre o slide e o atual (-2..2 para 5 itens)
+  // distância circular entre o slide e o atual (-2..3 para 6 itens)
   const dist = i => {
     let d = i - atual;
     if (d > total / 2) d -= total;
@@ -143,6 +143,41 @@ const semMovimento = matchMedia("(prefers-reduced-motion: reduce)").matches;
   new IntersectionObserver(([e]) => (e.isIntersecting ? iniciar() : parar()), { threshold: .3 }).observe(raiz);
 
   ir(0);
+})();
+
+// cardápio completo: cartões deslizáveis no celular
+(() => {
+  const trilho = document.getElementById("menu-trilho");
+  if (!trilho) return;
+  const cards = [...trilho.querySelectorAll(".menu-card")];
+  const pontos = [...document.querySelectorAll("#menu-pontos i")];
+  const ant = document.getElementById("menu-ant");
+  const prox = document.getElementById("menu-prox");
+  const indice = () => {
+    const base = trilho.getBoundingClientRect().left + parseFloat(getComputedStyle(trilho).scrollPaddingLeft || 0);
+    let melhor = 0, menor = Infinity;
+    cards.forEach((c, i) => {
+      const d = Math.abs(c.getBoundingClientRect().left - base);
+      if (d < menor) { menor = d; melhor = i; }
+    });
+    return melhor;
+  };
+  const atualizar = () => {
+    const i = indice();
+    const fim = trilho.scrollLeft + trilho.clientWidth >= trilho.scrollWidth - 4;
+    pontos.forEach((p, k) => p.classList.toggle("ativo", k === i));
+    ant.disabled = trilho.scrollLeft <= 4;
+    prox.disabled = fim;
+  };
+  const ir = i => {
+    const c = cards[Math.max(0, Math.min(cards.length - 1, i))];
+    trilho.scrollTo({ left: c.offsetLeft - trilho.firstElementChild.offsetLeft, behavior: semMovimento ? "auto" : "smooth" });
+  };
+  ant.addEventListener("click", () => ir(indice() - 1));
+  prox.addEventListener("click", () => ir(indice() + 1));
+  trilho.addEventListener("scroll", atualizar, { passive: true });
+  addEventListener("resize", atualizar);
+  atualizar();
 })();
 
 // sobre: leve parallax na foto
