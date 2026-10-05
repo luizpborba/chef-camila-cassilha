@@ -304,10 +304,8 @@ h1 em, h2 em, .citacao em {
   outline: none; transition: border-color .2s, box-shadow .2s;
   -webkit-appearance: none; appearance: none;
 }
-select.campo {
-  padding-right: 40px; cursor: pointer;
-  background: var(--branco) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236B6B70' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 14px center / 16px;
-}
+input[type=number].campo { -moz-appearance: textfield; }
+input[type=number].campo::-webkit-inner-spin-button, input[type=number].campo::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
 .campo:focus { border-color: var(--ouro); box-shadow: 0 0 0 4px rgba(181, 137, 47, .12); }
 .campo.erro { border-color: #B3261E; box-shadow: 0 0 0 4px rgba(179, 38, 30, .1); }
 .form-nota { margin-top: 16px; text-align: center; font-size: 12.5px; color: var(--texto); }
